@@ -13,6 +13,9 @@ e lo script che fornisce la lunghezza della navigazione
 Per il funzionamento è necessario installare il 
 [px4](https://dev.px4.io/en/setup/dev_env_linux.html#jmavsimgazebo-simulation)
 ros e gazebo oppure se già installato ros, solo i nodi mavros e mavlink.
+E la groudstation
+[Qgroundstation](http://qgroundcontrol.com/)
+oppure basta modificare il file di generazione dei waypoints nel file matlab
 
 ## Esecuzione
 Basta eseguire catkin_make nella cartella uav_navigation e poi collegarla alla directory ros  
