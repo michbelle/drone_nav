@@ -16,4 +16,4 @@ ros e gazebo oppure se già installato ros, solo i nodi mavros e mavlink.
 
 ## Esecuzione
 Basta eseguire catkin_make nella cartella uav_navigation e poi collegarla alla directory ros  
-Eseguire il file sh e poi dovrebbe essere eseguito
+Eseguire il file sh e poi inizia il divertimento
