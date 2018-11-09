@@ -1,0 +1,33 @@
+<launch>
+	<!-- vim: set ft=xml noet : -->
+	<!-- mavteleop example launch script -->
+
+
+    <arg name="joy_dev" default="/dev/input/js0"/>
+
+    <arg name="fcu_url" default="udp://:14540@127.0.0.1:14557" />
+
+	<!-- <include file="$(find mavros)/launch/px4.launch" /> -->
+
+	<arg name="teleop_args" default="-att" /> <!-- default -att -rc -vel -pos : -->
+
+	<node pkg="joy" type="joy_node" name="ps3_joy" required="True" output="screen">
+		<param name="dev" type="string" value="/dev/input/js0" />
+    		<param name="deadzone" value="0.12" />		
+		<param name="autorepeat_rate" value="5" /> <!-- Minimal update rate, Hz -->
+	</node>
+
+<node pkg="mavros_extras" type="setpoints_node.py" name="setpoints_node"  required="true" output="screen">
+    </node>
+
+<!--
+	<node pkg="diagnostic_aggregator" type="aggregator_node" name="diagnostic_aggregator" >
+     Load the file you made above 
+    		<rosparam command="load" file="$(find ps3joy)/diagnostics.yaml" />
+  	</node>
+
+	<node pkg="mavros_extras" type="mavteleop" name="mavteleop" args="$(arg teleop_args)" required="True" output="screen">
+		<rosparam command="load" file="$(find mavros_extras)/launch/ps3_config.yaml" />
+	</node>
+-->
+</launch>
