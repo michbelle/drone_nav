@@ -17,6 +17,8 @@ x=ari[0]
 y=ari[1]
 z=ari[2]
 c=0
+max = len (x)-1
+
 # Flight modes class
 # Flight modes are activated using ROS services
 class fcuModes:
@@ -95,6 +97,8 @@ class Controller:
         self.sp.position.x    = x[0]
 	self.sp.position.y    = y[0]
 	self.sp.position.z    = z[0]
+	
+	self.c=0
 
 
 	# We will fly at a fixed altitude for now
@@ -117,6 +121,7 @@ class Controller:
         # A Message for the current local position of the drone
         self.local_pos = Point(0.0, 0.0, 0.0)
 	
+	c=0
 
 
     # Callbacks
@@ -138,21 +143,27 @@ class Controller:
     ## Update setpoint message
     def updateSp(self):
 
-	c=0
-	self.sp.position.x = x[c]
-	self.sp.position.y = y[c]
-	self.sp.position.z = z[c]
+	self.sp.position.x = x[self.c]
+	self.sp.position.y = y[self.c]
+	self.sp.position.z = z[self.c]
+	print(self.c)
 
 #imposta la prima posizione
 
 #vede la corrispondenza tra la vicinanza fra i punti
-	if  self.local_pos.x - x[c] < 0.1:
-		 if  self.local_pos.y - y[c] < 0.1:
-			if  self.local_pos.z - z[c] < 0.1:
-				self.sp.position.x = x[c+1]
-				self.sp.position.y = y[c+1]
-				self.sp.position.z = z[c+1]
-				c=c+1
+
+	
+	if  self.local_pos.x - x[self.c] < 0.5 and  self.local_pos.x - x[self.c] > -0.5:
+		 if  self.local_pos.y - y[self.c] < 0.5 and  self.local_pos.y - y[self.c] > -0.5:
+			if  self.local_pos.z - z[self.c] < 0.5 and  self.local_pos.z - z[self.c] > -0.5:
+				if max == self.c :
+					self.c=self.c-1				
+				self.c=self.c+1
+				self.sp.position.x = x[self.c]
+				self.sp.position.y = y[self.c]
+				self.sp.position.z = z[self.c]
+				print(self.c)
+				
 
 
 #        x = -1.0*self.joy_msg.axes[0]
