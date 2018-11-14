@@ -27,9 +27,9 @@ Q=quaternion(QWW,QXX,QYY,QZZ);
 lunghezza_tot=0.0000;
 
 for c=2:si
-    x=ori(c)-ori(c-1);
-    y=ori(c)-ori(c-1);
-    z=ori(c)-ori(c-1);
+    x=ori(1,c)-ori(1,c-1);
+    y=ori(2,c)-ori(2,c-1);
+    z=ori(3,c)-ori(3,c-1);
     lunghezza_sez=sqrt(sqrt(x^2+y^2)+z^2);
     lunghezza_tot = lunghezza_tot + lunghezza_sez;
 end
