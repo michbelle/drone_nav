@@ -4,6 +4,8 @@
 %load('col.mat')
 load('col.mat')
 
+%prende la posizione attuale del drone
+
 start_longitude= startposition.LatestMessage.Longitude;	
 start_latitude = startposition.LatestMessage.Latitude;
 
@@ -14,6 +16,7 @@ start=[start_longitude,start_latitude];
 
 destination=start;
 
+%%Metodo 1 Errore elevato
 %theta angolo misurato in senso antiorario
 %R distanza punto
 
@@ -37,6 +40,8 @@ for c=1:si
 end
 
 destination;
+
+%%Metodo 2 metodo più preciso ma da sistemare
 
 %% φ2 = asin( sin φ1 ⋅ cos δ + cos φ1 ⋅ sin δ ⋅ cos θ )
 % λ2 = λ1 + atan2( sin θ ⋅ sin δ ⋅ cos φ1, cos δ − sin φ1 ⋅ sin φ2 )
@@ -74,6 +79,8 @@ end
 dest;
 
 destin=start;
+
+%%Verificare
 
 for c=2:si
    x=ori(1,c);
