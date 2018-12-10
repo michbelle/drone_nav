@@ -10,6 +10,7 @@ La cartella matlab contiene gli script per la generazione dei waypoints del dron
 e lo script che fornisce la lunghezza della navigazione e il tempo di risoluzione degli algoritmi
 
 ## Prerequisiti
+- ROS kinetic per Ubuntu 16.04 (per il laser  e octomap sono necessari almeno 8GB di RAM)
 - Per il funzionamento è necessario installare il 
 [px4](https://dev.px4.io/en/setup/dev_env_linux.html#jmavsimgazebo-simulation)  
 possibile ma non del tutto testato il funzionamento con la simulazione con ardupilot
