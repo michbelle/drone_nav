@@ -1,6 +1,6 @@
 #Da sistemare
 - /drone_nav/uav_navigation/src/drone_planning/model/iris2/iris1.urdf : 
-bisogna modificare all'inteno del file descritto il link ai modelli .dea, /home/michele/drone_nav/uav_navigation/src/drone_planning/model/iris2/*.dae con /home/nome_utente/...
+bisogna modificare all'inteno del file descritto il link ai modelli .dea, /home/test/drone_nav/uav_navigation/src/drone_planning/model/iris2/*.dae con /home/nome_utente/...
 -
 
 
