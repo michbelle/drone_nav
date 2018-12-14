@@ -1,5 +1,5 @@
-#Da sistemare
-- test simulazione completa
+#Da sistemare:
+- verificare simulazione funzionante da pc esterno dopo aver installato simulazione da px4
 
 
 # drone_nav
