@@ -1,3 +1,9 @@
+#Da sistemare
+- /drone_nav/uav_navigation/src/drone_planning/model/iris2/iris1.urdf : 
+bisogna modificare all'inteno del file descritto il link ai modelli .dea, /home/michele/drone_nav/uav_navigation/src/drone_planning/model/iris2/*.dae con /home/nome_utente/...
+-
+
+
 # drone_nav
 navigazione con moveit/gazebo e groundstation
 
