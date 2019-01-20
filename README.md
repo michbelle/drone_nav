@@ -20,7 +20,7 @@ possibile ma non del tutto testato il funzionamento con la simulazione con ardup
 - Mavros e mavlink.
 - Groudstation
 [Qgroundstation](http://qgroundcontrol.com/)
-,se si vuole scegliere diverse groundstation basta basta modificare il file di generazione dei waypoints nei file matlab che lo generano.
+,se si vuole scegliere diverse groundstation basta basta modificare il file di generazione dei waypoints nei file matlab.
 
 ## Esecuzione
 Per installare tutto basta eseguire il file sh  
