@@ -1,6 +1,7 @@
 #Da sistemare:
 - verificare simulazione funzionante da pc esterno dopo aver installato simulazione da px4
 - provare ad usare QGis per la costruzione dell'ambiente 3d
+- sostituzione i file matlab con python 
 
 
 # drone_nav
