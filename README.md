@@ -27,6 +27,6 @@ possibile ma non del tutto testato il funzionamento con la simulazione con ardup
 ## Esecuzione
 Per installare tutto basta eseguire il file sh  
 source initial_ros_px4_simu.sh  
-che installa la simulazione fornita da px4 con ROS kinect e i pacchetti ros mavros e mavlink per la connessione con il drone (il file è preso dal sito px4 indicato in precedenza data: 21/12/2018)  
+che installa la simulazione fornita da px4 con ROS kinect e i pacchetti ros mavros e mavlink per la connessione con il drone (il file è preso dal sito px4 indicato in precedenza data: 21/12/2018). La versione è disponibile come fork *Copy nella mia cartella principale  
 Poi basta eseguire catkin_make nella cartella uav_navigation e poi collegarla alla directory ros  
 Eseguire il file sh e poi inizia il divertimento
